@@ -72,11 +72,13 @@ static RequestVersionManager* sharedInstance = nil;
 }
 
 
-- (void)operationManager:(RPOperationManager*)operationManager
-        didFailOperation:(RPRequestOperation*)operation
-               withError:(NSError*)error
+- (BOOL)isHandledOperationManager:(RPOperationManager*)operationManager
+                 didFailOperation:(RPRequestOperation*)operation
+                        withError:(NSError*)error
 {
     [self checkUpdateInHeaders:operation.response.allHeaderFields];
+    
+    return NO;
 }
 
 
