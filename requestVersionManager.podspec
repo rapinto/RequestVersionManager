@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "requestVersionManager"
-  s.version      = "2.0.0"
+  s.version      = "2.0.1"
   s.summary      = "Link between RPOperationManager and VersionManager"
 
   s.description  = <<-DESC
@@ -126,10 +126,9 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-    s.watchos.s.dependency = "RPNetworking", "~> 2.0.7"
-    s.ios.s.dependency = "RPNetworking", "~> 2.0.7"
-    s.watchos.s.dependency = "VersionManager", "~> 1.0.3"
-    s.ios.s.dependency = "VersionManager", "~> 1.0.3"
+    s.watchos.dependency = "RPNetworking", "~> 2.0.7"
+    s.ios.dependency = "RPNetworking", "~> 2.0.7"
+    s.watchos.dependency = "VersionManager", "~> 1.0.3"
+    s.ios.dependency = "VersionManager", "~> 1.0.3"
 
 end
