@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "requestVersionManager"
-  s.version      = "2.0.1"
+  s.version      = "2.0.2"
   s.summary      = "Link between RPOperationManager and VersionManager"
 
   s.description  = <<-DESC
@@ -124,11 +124,11 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  s.requires_arc = true
+    s.requires_arc = true
 
-    s.watchos.dependency = "RPNetworking", "~> 2.0.7"
-    s.ios.dependency = "RPNetworking", "~> 2.0.7"
-    s.watchos.dependency = "VersionManager", "~> 1.0.3"
-    s.ios.dependency = "VersionManager", "~> 1.0.3"
+    s.watchos.dependency "RPNetworking", "~> 2.0.7"
+    s.ios.dependency "RPNetworking", "~> 2.0.7"
+    s.watchos.dependency "VersionManager", "~> 1.0.3"
+    s.ios.dependency "VersionManager", "~> 1.0.3"
 
 end
