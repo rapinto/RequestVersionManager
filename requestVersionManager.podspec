@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "requestVersionManager"
-  s.version      = "1.0.1"
+  s.version      = "2.0.0"
   s.summary      = "Link between RPOperationManager and VersionManager"
 
   s.description  = <<-DESC
@@ -64,13 +64,8 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # s.platform     = :ios
-  s.platform     = :ios, "7.0"
-
-  #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
-  # s.osx.deployment_target = "10.7"
-  # s.watchos.deployment_target = "2.0"
+    s.watchos.deployment_target = "2.0"
+    s.ios.deployment_target = "7.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -79,7 +74,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/rapinto/requestVersionManager.git", :tag => "1.0.1" }
+  s.source       = { :git => "https://github.com/rapinto/requestVersionManager.git", :tag => s.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -116,8 +111,8 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
-  s.frameworks = "Foundation"
+    s.watchos.frameworks = 'Foundation'
+    s.ios.frameworks = 'Foundation'
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
@@ -132,7 +127,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-   s.dependency "RPNetworking", "~> 1.0.3"
-   s.dependency "VersionManager", "~> 1.0.0"
+    s.watchos.s.dependency = "RPNetworking", "~> 2.0.7"
+    s.ios.s.dependency = "RPNetworking", "~> 2.0.7"
+    s.watchos.s.dependency = "VersionManager", "~> 1.0.3"
+    s.ios.s.dependency = "VersionManager", "~> 1.0.3"
 
 end
