@@ -28,7 +28,7 @@
 
 
 #import <Foundation/Foundation.h>
-#import "RPHTTPManagerDelegate.h"
+#import "RPNetworking.h"
 
 
 
