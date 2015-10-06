@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "requestVersionManager"
-  s.version      = "2.0.6"
+  s.version      = "2.0.7"
   s.summary      = "Link between RPOperationManager and VersionManager"
 
   s.description  = <<-DESC
@@ -126,12 +126,9 @@ Pod::Spec.new do |s|
 
     s.requires_arc = true
 
-    s.watchos.dependency "AFNetworking", "~> 2.5"
-    s.watchos.dependency "RPNetworking", "~> 2.0.10"
-    s.watchos.dependency "VersionManager", "~> 1.1.3"
+    s.dependency "AFNetworking", "~> 2.6.1"
+    s.dependency "RPNetworking", "~> 2.0.10"
+    s.dependency "VersionManager", "~> 1.1.3"
 
-    s.ios.dependency "AFNetworking", "~> 2.5"
-    s.ios.dependency "RPNetworking", "~> 2.0.10"
-    s.ios.dependency "VersionManager", "~> 1.1.3"
 
 end
