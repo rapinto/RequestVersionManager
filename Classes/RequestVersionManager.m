@@ -115,8 +115,8 @@ static RequestVersionManager* sharedInstance = nil;
         return;
     }
     
-    
-    [VersionManager setMinimumAllowedVersion:lMinimumAllowedVersion lastAvailableVersion:lLastAvailableVersion];
+    [VersionManager sharedInstance].appGroup = _appGroup;
+    [[VersionManager sharedInstance] setMinimumAllowedVersion:lMinimumAllowedVersion lastAvailableVersion:lLastAvailableVersion];
 }
 
 

@@ -37,6 +37,10 @@
 
 
 
+@property (nonatomic, strong) NSString* appGroup;
+
+
+
 + (RequestVersionManager*)sharedInstance;
 
 

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "requestVersionManager"
-  s.version      = "2.0.8"
+  s.version      = "2.0.9"
   s.summary      = "Link between RPOperationManager and VersionManager"
 
   s.description  = <<-DESC
